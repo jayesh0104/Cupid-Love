@@ -1,0 +1,25 @@
+// Carousel
+
+.flickity-enabled {
+    &.is-draggable {
+        .flickity-viewport {
+            cursor: url("../img/icon-arrow-grab.png"), grab;
+
+            &.is-pointer-down {
+                cursor: url("../img/icon-arrow-grab.png"), grab;
+            }
+        }
+    }
+}
+
+.page-dots {
+    background-image: url("../img/icon-wedding-heart.svg");
+    background-size: cover;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+
+    &.is-selected {
+        background-image: url("../img/icon-wedding-heart-primary.svg");
+    }
+}

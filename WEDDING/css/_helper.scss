@@ -1,0 +1,195 @@
+// Helpers
+
+// Backgrounds
+.bg-img-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg-overlay {
+    &::before {
+        background: rgba(37, 37, 37, 0.5);
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+// Buttons
+.btn {
+    background: $white;
+    border: 2px solid $dark;
+    color: $dark;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    padding: 10px 22px;
+    text-transform: uppercase;
+
+    &:not(.border-0) {
+        &:hover {
+            background: $dark;
+            color: $white;
+        }
+    }
+}
+
+// Clipping path images 
+.img-clip-path {
+    &::before {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &.clip-hero {
+        &::before {
+            background-image: url("../img/clip-path-hero.png");
+        }
+    }
+
+    &.clip-love-story {
+        &::before {
+            background-image: url("../img/clip-path-love-story.png");
+        }
+    }
+}
+
+// Fonts
+.font-base {
+    font-family: $font-family-base !important;
+}
+
+.font-alt {
+    font-family: $font-family-alt !important;
+}
+
+// Icons
+.icon-svg {
+    display: block;
+
+    img {
+        height: 44px;
+        width: 44px;
+    }
+
+    &-lg {
+        img {
+            height: 62px;
+            width: 62px;
+        }
+    }
+}
+
+// Ornaments
+.ornament-corner {
+    opacity: 0.8;
+
+    &:before,
+    &:after {
+        background-size: cover;
+        bottom: 0;
+        content: '';
+        display: block;
+        height: 70px;
+        margin: 0.5rem;
+        position: absolute;
+        width: 70px;
+    }
+
+    &:before {
+        left: 0;
+    }
+
+    &:after {
+        right: 0;
+        transform: rotate(270deg);
+    }
+
+    &.ornament-light {
+
+        &:before,
+        &:after {
+            background-image: url("../img/ornament-corner-light.png");
+        }
+    }
+
+    &.ornament-primary {
+
+        &:before,
+        &:after {
+            background-image: url("../img/ornament-corner-primary.png");
+        }
+    }
+
+    &.ornament-top {
+
+        &:before,
+        &:after {
+            top: 0;
+        }
+
+        &:before {
+            transform: rotate(90deg);
+        }
+
+        &:after {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+// Position
+.fixed-top {
+    left: 0;
+    right: 0;
+    position: fixed;
+    top: 0;
+    z-index: $zindex-fixed;
+}
+
+// Sections
+.section-divider {
+    display: block;
+    margin: 0 auto;
+    height: 33px;
+    width: 126px;
+
+    &.divider-primary {
+        background-image: url("../img/section-divider-primary.svg");
+    }
+
+    &.divider-secondary {
+        background-image: url("../img/section-divider-secondary.svg");
+    }
+}
+
+// Separators
+.sep-line {
+    border-top: 4px solid;
+    opacity: 1;
+    width: 30px;
+}
+
+@include media-breakpoint-up(lg) {
+    .ornament-corner {
+        &.ornament-lg {
+
+            &:before,
+            &:after {
+                height: 100px;
+                width: 100px;
+            }
+        }
+    }
+}

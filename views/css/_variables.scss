@@ -1,0 +1,43 @@
+// Variables
+
+// BS Custom Colors
+$primary: #6D8A91;
+$secondary: #C99969;
+$secondary-2: #E8EDE6;
+
+// BS Containers
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1142px
+);
+
+// BS Links
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: $primary;
+$link-hover-decoration: underline;
+
+// BS Typography
+$font-family-base: 'Questrial', sans-serif;;
+$font-family-alt: 'PT Serif', serif;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$h7-font-size: 0.9375rem;
+$h8-font-size: 0.875rem;
+$h9-font-size: 0.8125rem;
+$h10-font-size: 0.75rem;
+
+// Letter spacing
+$letter-spacers: (
+    1: 1px,
+    2: 2px,
+    3: 3px
+);
+
+// Navbar
+$navbar-height: 100px;

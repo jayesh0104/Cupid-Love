@@ -1,0 +1,13 @@
+// Footer
+
+footer {
+    padding-bottom: 70px;
+    padding-top: 70px;
+}
+
+@include media-breakpoint-up(lg) {
+    footer {
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+}
