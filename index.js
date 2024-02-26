@@ -15,35 +15,35 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Connect to the mydatabase database
-const con = mysql.createConnection({
-  host: "127.0.0.1",
-  user: "root",
-  password: "Babaramdev@15",
-  database: "mydatabase"
-});
+// const con = mysql.createConnection({
+//   host: "127.0.0.1",
+//   user: "root",
+//   password: "Babaramdev@15",
+//   database: "mydatabase"
+// });
 
-// Serve static files from the root directory
-app.use(express.static('./'));
+// // Serve static files from the root directory
+// app.use(express.static('./'));
 
-// Define the route for the contact form
-app.post('/contact', function(req, res) {
-  // Get the form data from the request body
-  console.log("data recieved");
-  const name = req.body.name;
-  const email = req.body.email;
-  const subject = req.body.subject;
-  const message = req.body.message;
+// // Define the route for the contact form
+// app.post('/contact', function(req, res) {
+//   // Get the form data from the request body
+//   console.log("data recieved");
+//   const name = req.body.name;
+//   const email = req.body.email;
+//   const subject = req.body.subject;
+//   const message = req.body.message;
 
-  // Insert the form data into the contacts table
-  const sql = "INSERT INTO contacts (name, email, subject, message) VALUES (?, ?, ?, ?)";
-  con.query(sql, [name, email, subject, message], function(err, result) {
-    if (err) throw err;
-    console.log("Form data was inserted successfully.");
-  });
+//   // Insert the form data into the contacts table
+//   const sql = "INSERT INTO contacts (name, email, subject, message) VALUES (?, ?, ?, ?)";
+//   con.query(sql, [name, email, subject, message], function(err, result) {
+//     if (err) throw err;
+//     console.log("Form data was inserted successfully.");
+//   });
 
-  // Send a response to the client
-  res.send('Form data was received successfully.');
-});
+//   // Send a response to the client
+//   res.send('Form data was received successfully.');
+// });
 
 // Define the root route
 app.get("/", (req, res) => {
